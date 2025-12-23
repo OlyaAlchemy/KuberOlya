@@ -4,6 +4,6 @@ kind: Kustomization
 namespace: production
 
 resources:
-  - helmrelease.yaml.yaml
+  - helmrelease.yaml
   - mariadb-operator-helmrepo.yaml
   - mariadb-operator-helmrelease.yaml
