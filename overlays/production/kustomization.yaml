@@ -8,3 +8,4 @@ resources:
   - mariadb-operator-helmrepo.yaml
   - mariadb-operator-helmrelease.yaml
   - namespace.yaml
+  - helmrepository.yaml
