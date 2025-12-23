@@ -9,6 +9,7 @@ spec:
   targetNamespace: production
   chart:
     spec:
+      createNamespace: true
       chart: ../../wordp
       version: "18.x.x"
       valuesFiles:
