@@ -1,0 +1,19 @@
+apiVersion: mariadb.mmontes.io/v1alpha1
+kind: MariaDB
+metadata:
+  name: {{ .Values.env.WORDPRESS_DB_HOST}}
+  namespace: wordpress-a
+spec:
+  image: mariadb:10.11
+  database: wordpress
+  username: wpuser
+  passwordSecretKeyRef:
+    name: mysql-pass
+    key: password
+
+  rootPasswordSecretKeyRef:
+    name: mysql-pass
+    key: password
+
+  storage:
+    size: 10Gi

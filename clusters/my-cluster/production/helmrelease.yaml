@@ -1,0 +1,29 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: wordpress
+  namespace: wordpress-a
+spec:
+  interval: 15m
+  timeout: 5m
+  targetNamespace: production
+  chart:
+    spec:
+      chart: wordpress
+      version: "18.x.x"
+      valuesFiles:
+        - ../../wordp/values-prod.yaml
+      sourceRef:
+        kind: HelmRepository
+        name: bitnami
+        namespace: flux-system
+
+  values:
+    mariadb:
+      enabled: false
+
+    externalDatabase:
+      host: wordpress-db.wordpress-a.svc.cluster.local
+      user: wpuser
+      database: wordpress
+      password: wp-password
