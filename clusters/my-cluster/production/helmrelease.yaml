@@ -9,7 +9,7 @@ spec:
   targetNamespace: production
   chart:
     spec:
-      chart: wordpress
+      chart: ../../wordp.Chart.yaml
       version: "18.x.x"
       valuesFiles:
         - ../../wordp/values-prod.yaml
