@@ -5,11 +5,13 @@ image:
   pullPolicy: IfNotPresent
   tag: "6.2.1-apache"
 
-
 service:
   type: ClusterIP
   port: 80
   targetPort: 80
+
+namespace:
+  name: production
 
 # This block is for setting up the ingress for more information can be found here: https://kubernetes.io/docs/concepts/services-networking/ingress/
 ingress:
