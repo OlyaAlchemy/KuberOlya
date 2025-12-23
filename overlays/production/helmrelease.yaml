@@ -9,7 +9,6 @@ spec:
   targetNamespace: production
   chart:
     spec:
-      createNamespace: true
       chart: ../../wordp
       version: "18.x.x"
       valuesFiles:
@@ -19,9 +18,6 @@ spec:
         name: bitnami
         namespace: flux-system
 
-  values:
-    mariadb:
-      enabled: false
 
     externalDatabase:
       host: wordpress-db.wordpress-a.svc.cluster.local
