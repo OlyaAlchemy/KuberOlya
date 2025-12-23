@@ -19,8 +19,3 @@ spec:
         namespace: flux-system
 
 
-    externalDatabase:
-      host: wordpress-db.wordpress-a.svc.cluster.local
-      user: wpuser
-      database: wordpress
-      password: wp-password
