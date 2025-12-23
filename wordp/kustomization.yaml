@@ -6,4 +6,6 @@ resources:
   - templates/service.yaml
   - templates/ingress.yaml
   - templates/configMap.yaml
+  - templates/hpa.yaml
+  - templates/namespace.yaml
   - mariadb.yaml
