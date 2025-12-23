@@ -7,4 +7,3 @@ resources:
   - helmrelease.yaml
   - mariadb-operator-helmrepo.yaml
   - mariadb-operator-helmrelease.yaml
-  - namespace.yaml
